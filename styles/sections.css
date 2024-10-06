@@ -27,34 +27,27 @@ section header {
     img {
         height: 100%;
         object-fit: cover;
+    }
+
+    .card {
         border-radius: 4px;
-    }
-}
-
-#weekly {
-    grid-area: weekly;
-}
-
-.card {
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        top: 50%;
-        background: linear-gradient(
-            180deg,
+        overflow: hidden;
+        position: relative;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            top: 50%;
+            background: linear-gradient (180deg,
             transparent 0%,
-            #020617 100%
-        )
-    }
+            #020617 100%);
+        }
 
         figcaption {
             position: absolute;
             bottom: 0;
+
             padding: 24px;
 
             &:has(.text-lg) {
@@ -64,11 +57,14 @@ section header {
             h2 {
                 margin-top: 8px;
             }
-        }
 
+        }
     }
 
+}
+
 #weekly {
+    grid-area: weekly;
 
     &>div {
         grid-template-columns: repeat(4, 292px);
